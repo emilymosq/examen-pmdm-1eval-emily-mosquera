@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.examemily.examenpmdm.fragmentos.Pagina1;
+import com.examemily.examenpmdm.fragmentos.Pagina2;
+import com.examemily.examenpmdm.fragmentos.Pagina3;
 
 public class Paginador extends FragmentPagerAdapter {
     private final Context mContext;
@@ -23,6 +25,10 @@ public class Paginador extends FragmentPagerAdapter {
         switch(position){
             case 0:
                 return new Pagina1();
+            case 1:
+                return new Pagina2();
+            case 2:
+                return new Pagina3();
             default:
                 return null;
         }
@@ -30,6 +36,6 @@ public class Paginador extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 1;
+        return 3;
     }
 }
